@@ -23,4 +23,8 @@ public class CategoryBook {
     // Sửa tên thuộc tính từ bookList thành books và mappedBy thành "category"
     @OneToMany(mappedBy = "category")
     private List<Book> books;
+
+
+    @Column(name = "description")
+    private String description;
 }

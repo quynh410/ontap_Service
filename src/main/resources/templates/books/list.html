@@ -47,7 +47,7 @@
                         <td th:text="${book.author}"></td>
                         <td th:text="${book.publisher}"></td>
                         <td th:text="${book.yearPublish}"></td>
-                        <td th:text="${book.price}"></td>
+                        <td th:text="${#numbers.formatCurrency(book.price)}"></td>
                         <td th:text="${book.category != null ? book.category.cateBookName : 'Chưa có danh mục'}"></td>
                         <td>
                             <a th:href="@{'/books/edit/' + ${book.bookId}}" class="btn btn-sm btn-warning">Sửa</a>
